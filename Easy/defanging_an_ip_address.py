@@ -25,8 +25,5 @@ class Solution:
     def defangIPaddr(self, address: str) -> str:
         defangedIP = ""
         for ch in address:
-            if ch == ".":
-                defangedIP += "[.]"
-            else:
-                defangedIP += ch
+            defangedIP += ("[.]" if ch == "." else ch)
         return defangedIP
